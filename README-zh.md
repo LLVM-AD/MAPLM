@@ -1,6 +1,8 @@
 # MAPLM数据集
 #### - WACV 2024自动驾驶大语言视觉基础模型研讨会（LLVM-AD）
 
+![Poster](./figures/poster.png)
+
 ## 研讨会介绍
 WACV全称：Winter Conference on Applications of Computer Vision，是领域内著名的计算机视觉应用会议之一，每年举办一次。本次发起的“自动驾驶大语言视觉模型研讨会”，全称：1st Workshop on Large Language and Vision Models for Autonomous Driving (LLVM-AD)，由腾讯地图联合PediaMed AI实验室, 伊利诺伊大学厄巴纳-香槟分校、普渡大学以及弗吉尼亚大学共同举办，针对计算机视觉、模式识别、自动驾驶、高精度地图等一系列领域的议题，组织论文投稿，比赛及获奖分享，将在WACV 2024期间举行。本次研讨会旨在汇集学术界和工业界的专业人士，探索大型语言和视觉模型在自动驾驶以及高精地图中的应用。
 作为研讨会计划的一部分，我们将发布两个开源数据集，用于实现对真实世界交通语言理解的研究。
