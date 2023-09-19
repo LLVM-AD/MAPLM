@@ -14,8 +14,8 @@ Tencent Maps HD Map T.Lab, in collaboration with the University of Illinois at U
 
 ### Scene of MAPLM：    
 MAPLM offers a variety of traffic scenarios, including highways, expressways, city roads, and rural roads, along with detailed intersection scenes. Each frame of data includes two components:           
-✧Point Cloud BEV: A projection image of 3D point cloud viewed from the BEV perspective with clear visuals and high resolution.        
-✧Panoramic Images: High-resolution photographs captured from front, left-rear, and right-rear angles by a wide-angle camera.    
+✧ Point Cloud BEV: A projection image of 3D point cloud viewed from the BEV perspective with clear visuals and high resolution.        
+✧ Panoramic Images: High-resolution photographs captured from front, left-rear, and right-rear angles by a wide-angle camera.    
 
 ### Annotations：    
 ✧ Feature-level: Lane lines, ground signs, stop lines, intersection areas, etc.        
@@ -37,7 +37,7 @@ The image below illustrates one frame's annotation information, encompassing thr
 Leveraging the rich road traffic scene information from the above dataset, we have designed a natural language and image combined Q&A task based on ScienceQA.    
 
 ### Task Introduction:   
-We offer the following data or prior inputs:    
+We offer the following data or prior inputs:       
 ✓ Point Cloud BEV Image: 3D point cloud projection in BEV perspective.    
 ✓ Panoramic Images: Wide-angle camera shots covering front, left-rear, and right-rear angles.    
 ✓ Projection Conversion Parameters: Perspective projection conversion parameters for each frame's photo and point cloud image.     
