@@ -1,5 +1,5 @@
 # MAPLM数据集
-#### - WACV 2024自动驾驶大语言视觉基础模型研讨会（LLVM-AD）
+#### - WACV 2024自动驾驶大语言视觉模型研讨会（LLVM-AD）
 
 ![Poster](./figures/poster.png)
 
