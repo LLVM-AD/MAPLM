@@ -50,7 +50,7 @@ Questions will randomly target various tag dimensions, such as scene type, numbe
 ### How to Participate:    
 ✓ Vision, multimodal integration, autonomous driving, high-definition mapping, and other relevant domain researchers or practitioners are welcome to join the challenge.    
 ✓ Apart from the workshop competition content, we'll invite guests for topic-related presentations. Interested parties are urged to keep an eye out and join this workshop for paper submissions.    
-✓ Outstanding students in the workshop paper submissions and competitions may receive priority for internship opportunities at Tencent Maps Perception Algorithm positions.    
+✓ Outstanding students in the workshop paper submissions and competitions may receive priority for internship opportunities at Tencent Maps Perception Machine Learning Engineer / Research Scientist positions.    
 ✓ Competition details are still being prepared. Please keep checking our workshop homepage for updates.        
 
 
