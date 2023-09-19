@@ -66,7 +66,7 @@ WACV全称：Winter Conference on Applications of Computer Vision，是领域内
   title={High-Definition Map Automatic Annotation System Based on Active Learning},
   author={Zheng, Chao and Cao, Xu and Tang, Kun and Cao, Zhipeng and Sizikova, Elena and Zhou, Tong and Li, Erlong and Liu, Ao and Zou, Shengtao and Yan, Xinrui and Mei, Shuqi},
   journal={AI Magazine},
-  year={2023},
+  year={2024},
   publisher={Wiley Online Library}
 }
 ```
