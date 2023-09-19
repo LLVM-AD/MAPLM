@@ -73,7 +73,7 @@ If the code, datasets, and research behind this workshop inspire you, please cit
   title={High-Definition Map Automatic Annotation System Based on Active Learning},
   author={Zheng, Chao and Cao, Xu and Tang, Kun and Cao, Zhipeng and Sizikova, Elena and Zhou, Tong and Li, Erlong and Liu, Ao and Zou, Shengtao and Yan, Xinrui and Mei, Shuqi},
   journal={AI Magazine},
-  year={2023},
+  year={2024},
   publisher={Wiley Online Library}
 }
 ```
