@@ -69,7 +69,7 @@ MAPLM提供了包含高速、快速路、城市道路、乡村道路在内的各
   title={High-Definition Map Automatic Annotation System Based on Active Learning},
   author={Zheng, Chao and Cao, Xu and Tang, Kun and Cao, Zhipeng and Sizikova, Elena and Zhou, Tong and Li, Erlong and Liu, Ao and Zou, Shengtao and Yan, Xinrui and Mei, Shuqi},
   journal={AI Magazine},
-  year={2024},
+  year={2023},
   publisher={Wiley Online Library}
 }
 ```
