@@ -5,7 +5,7 @@ import json
 import random
 from typing import List
 
-from utils import load_data, get_result_file, new_acc, compute_acc
+from utils import load_data, get_result_file, acc_counter, compute_acc
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_root', type=str, default='data/maplm_v0.1')
@@ -19,14 +19,13 @@ parser.add_argument('--debug', action='store_true', help='Debug mode')
 args = parser.parse_args()
 
 results = dict(
-    question_overall=new_acc(),
-    frame_overall=new_acc(),
+    question_overall=acc_counter(),
+    frame_overall=acc_counter(),
 )
 
 if __name__ == "__main__":
     print('===== Input Arguments =====')
     print(json.dumps(vars(args), indent=4, sort_keys=True))
-    load_data(args)
 
     random.seed(args.random_seed)
 
@@ -49,7 +48,7 @@ if __name__ == "__main__":
             random_guess: int = random.randint(0, len(choices) - 1)
 
             if question not in results:
-                results[question] = new_acc()
+                results[question] = acc_counter()
 
             correct = bool(random_guess == true_answer)
             corrects.append(correct)
@@ -66,5 +65,3 @@ if __name__ == "__main__":
     acc_dict = compute_acc(results)
     print(json.dumps(acc_dict, indent=4, sort_keys=True))
     print(json.dumps(results, indent=4, sort_keys=True))
-
-

@@ -19,7 +19,7 @@ def get_result_file(args):
     return result_file
 
 
-def new_acc():
+def acc_counter():
     return {
         'total': 0,
         'correct': 0
