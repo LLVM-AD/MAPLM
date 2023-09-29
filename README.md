@@ -106,7 +106,7 @@ update your results on the leaderboard.**
 
 |      Method       | FRM  |  QNS  |  LAN  |  INT  |  QLT  |  SCN  |
 |:-----------------:|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **Random Change** | 0.00 | 19.55 | 21.00 | 16.73 | 25.20 | 15.27 |
+| **Random Chance** | 0.00 | 19.55 | 21.00 | 16.73 | 25.20 | 15.27 |
 
 ## Citation
 
