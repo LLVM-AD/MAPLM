@@ -1,83 +1,64 @@
 # MAPLM: A Large-Scale Vision-Language Dataset for Map and Traffic Scene Understanding
 
-### [中文简介](./README-zh.md)
+Tencent, University of Illinois at Urbana-Champaign, Purdue University, University of Virginia    
 
-### WACV 2024 Workshop on Large Language Vision Models for Autonomous Driving (LLVM-AD)
+### [Chinese Introduction](./README-zh.md)
 
-![Poster](./figures/poster.png)
+### Open-source datasets of 1st Workshop on Large Language Vision Models for Autonomous Driving (LLVM-AD) in WACV 2024
 
-## Workshop Introduction
+## LLVM-AD Workshop Introduction
 
-The Winter Conference on Applications of Computer Vision (WACV) is a renowned conference in the field of computer vision
-applications, held annually. This conference will co-host the "Workshop on Large Language and Vision Models for
-Autonomous Driving (LLVM-AD)" in collaboration with Tencent Maps, PediaMed AI Lab, University of Illinois at
-Urbana-Champaign, Purdue University, and University of Virginia. The workshop will cover various topics including
-computer vision, pattern recognition, autonomous driving, and high-definition maps. It will include paper submissions,
-competitions, and award-sharing sessions during WACV 2024. The goal is to bring together professionals from academia and
-industry to explore the applications of large language and vision models in autonomous driving and high-definition
-mapping.
+The Winter Conference on Applications of Computer Vision (WACV) is a renowned conference in the field of computer vision applications, held annually. This conference will co-host the "Workshop on Large Language and Vision Models for Autonomous Driving (LLVM-AD)" in collaboration with Tencent Maps, PediaMed AI Lab, University of Illinois at Urbana-Champaign, Purdue University, and University of Virginia. The workshop will cover various topics including computer vision, pattern recognition, autonomous driving, and high-definition maps. It will include paper submissions, competitions, and award-sharing sessions during WACV 2024. The goal is to bring together professionals from academia and industry to explore the applications of large language and vision models in autonomous driving and high-definition mapping.     
 
-As part of the workshop, we are releasing two open-source datasets to encourage research on understanding real-world
-traffic language. While using these datasets is recommended, it is not mandatory for paper submissions related to these
-two datasets.
+As part of the workshop, we are releasing two open-source datasets to encourage research on understanding real-world traffic language. While using these datasets is recommended, it is not mandatory for paper submissions related to these two datasets.     
 
 ## MAPLM Dataset
 
-Tencent Maps HD Map T.Lab, in collaboration with the University of Illinois at Urbana-Champaign, Purdue University, and
-the University of Virginia, has launched MAPLM, the industry's first multimodal language+vision traffic scenario
-understanding dataset. MAPLM combines point cloud BEV (Bird's Eye View) and panoramic images to provide a rich
-collection of road scenario images. This dataset also includes multi-level scene description data, which helps models
-navigate through complex and diverse traffic environments.
+Tencent Maps HD Map T.Lab, in collaboration with the University of Illinois at Urbana-Champaign, Purdue University, and the University of Virginia, has launched MAPLM, the industry's first multimodal language+vision traffic scenario understanding dataset. MAPLM combines point cloud BEV (Bird's Eye View) and panoramic images to provide a rich collection of road scenario images. This dataset also includes multi-level scene description data, which helps models navigate through complex and diverse traffic environments.     
 
 ### Scene of MAPLM：
 
-MAPLM offers a variety of traffic scenarios, including highways, expressways, city roads, and rural roads, along with
-detailed intersection scenes. Each frame of data includes two components:           
-✧ Point Cloud BEV: A projection image of 3D point cloud viewed from the BEV perspective with clear visuals and high
-resolution.        
-✧ Panoramic Images: High-resolution photographs captured from front, left-rear, and right-rear angles by a wide-angle
-camera.
+MAPLM offers a variety of traffic scenarios, including highways, expressways, city roads, and rural roads, along with detailed intersection scenes. Each frame of data includes two components:                   
+✧ Point Cloud BEV: A projection image of 3D point cloud viewed from the BEV perspective with clear visuals and high resolution.     
+
+✧ Panoramic Images: High-resolution photographs captured from front, left-rear, and right-rear angles by a wide-angle camera.      
 
 ### Annotations：
 
-✧ Feature-level: Lane lines, ground signs, stop lines, intersection areas, etc.        
-✧ Lane-level: Lane types, directions of traffic, turn categories, etc.       
-✧ Road-level: Scene types, road data quality, intersection structures, etc.
+✧ Feature-level: Lane lines, ground signs, stop lines, intersection areas, etc.          
+✧ Lane-level: Lane types, directions of traffic, turn categories, etc.        
+✧ Road-level: Scene types, road data quality, intersection structures, etc.     
 
-### Data Display：
+### Data Display：    
 
-Point Cloud BEV image + 3 panoramic photos. Note: Panoramic images are 4096*3000 portrait shots. The image below is only
-a cropped sample.
+3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic photos + HD Map annotations. Note: Panoramic images are 4096*3000 portrait shots. The image below is only a cropped sample.           
 
 ![Poster](./figures/example1.png)
 
 ### Label Display：
 
-The image below illustrates one frame's annotation information, encompassing three parts: road-level information (in red
-font), lane-level information (yellow geometric lines + orange font), and intersection data (blue polygons + blue font).
+The image below illustrates one frame's annotation information, encompassing three parts: road-level information (in red font), lane-level information (yellow geometric lines + orange font), and intersection data (blue polygons + blue font).     
 
-![Poster](./figures/example2.png)
+<!-- ![Poster](./figures/example2.png) -->
 
 ## Workshop Challenge
 
-Leveraging the rich road traffic scene information from the above dataset, we have designed a natural language and image
-combined Q&A task based on ScienceQA.
+Leveraging the rich road traffic scene information from the above dataset, we have designed a natural language and image combined Q&A task.     
 
 ### Data
 
 We offer the following data:       
 ✓ Point Cloud BEV Image: 3D point cloud projection in BEV perspective.    
 ✓ Panoramic Images: Wide-angle camera shots covering front, left-rear, and right-rear angles.    
-✓ Projection Conversion Parameters: Perspective projection conversion parameters for each frame's photo and point cloud
-image.     
-Questions will target various tag dimensions, such as scene type, number and attributes of lanes, presence of
-intersections, etc. Sample questions are as follows:
+✓ Projection Conversion Parameters: Perspective projection conversion parameters for each frame's photo and 3D point cloud.      
+
+Questions will target various tag dimensions, such as scene type, number and attributes of lanes, presence of intersections, etc. Sample questions are as follows:     
 
 ![Poster](./figures/qa1.png)
 
 ![Poster](./figures/qa2.png)
 
-### Evaluation
+### Evaluation      
 
 We will evaluate the performance of models on the test set using the following accuracy metrics:
 
@@ -107,6 +88,18 @@ update your results on the leaderboard.**
 |      Method       | FRM  |  QNS  |  LAN  |  INT  |  QLT  |  SCN  |
 |:-----------------:|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | **Random Chance** | 0.00 | 19.55 | 21.00 | 16.73 | 25.20 | 15.27 |
+
+
+### Data Release Timeline     
+
+09/2023 First part of QA data, including extracted Point Cloud BEV image + 3 panoramic images: [Link](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)     
+
+01/2024 HD Map data and image caption, including 2M of 3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic images + HD Map annotations.      
+  
+
+## UCU Dataset
+
+[See this page](https://github.com/LLVM-AD/ucu-dataset)
 
 ## Citation
 
