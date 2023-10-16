@@ -92,9 +92,9 @@ update your results on the leaderboard.**
 
 ### Data Release Timeline     
 
-09/2023 First part of QA data, including extracted Point Cloud BEV image + 3 panoramic images: [Link](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)     
+`09/2023` First part of QA data, including extracted Point Cloud BEV image + 3 panoramic images: [Link](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)     
 
-01/2024 HD Map data and image caption, including 2M of 3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic images + HD Map annotations.      
+`01/2024` HD Map data and image caption, including 2M of 3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic images + HD Map annotations.      
   
 
 ## UCU Dataset
