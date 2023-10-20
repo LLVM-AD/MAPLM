@@ -47,7 +47,7 @@ The image below illustrates one frame's annotation information, encompassing thr
 
 Leveraging the rich road traffic scene information from the above dataset, we have designed a natural language and image combined Q&A task.     
 
-### Data
+### Data    
 
 We offer the following data:       
 ✓ Point Cloud BEV Image: 3D point cloud projection in BEV perspective.    
@@ -56,9 +56,9 @@ We offer the following data:
 
 Questions will target various tag dimensions, such as scene type, number and attributes of lanes, presence of intersections, etc. Sample questions are as follows:     
 
-![Poster](./figures/qa1.png)
+![Poster](./figures/qa1.png)     
 
-![Poster](./figures/qa2.png)
+![Poster](./figures/qa2.png)     
 
 ### Evaluation      
 
@@ -95,6 +95,11 @@ update your results on the leaderboard.**
 ### Data Release Timeline     
 
 `09/2023` First part of QA data, including extracted Point Cloud BEV image + 3 panoramic images: [Link](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)     
+Data Download: Put the maplm_v0.1.z01, maplm_v0.1.z02, maplm_v0.1.z03, maplm_v0.1.zip into one directory then run the following command to unzip the dataset.      
+```
+zip -s 0  maplm_v0.1.zip --out combine.zip
+unzip combine.zip   
+```
 
 `01/2024` HD Map data and image caption, including 2M of 3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic images + HD Map annotations.      
   
