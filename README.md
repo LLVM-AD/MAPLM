@@ -1,18 +1,12 @@
-# MAPLM: A Large-Scale Vision-Language Dataset for Map and Traffic Scene Understanding
+# MAPLM: A Large-Scale Vision-Language Dataset for Map and Traffic Scene Understanding     
 
 Tencent, University of Illinois at Urbana-Champaign, Purdue University, University of Virginia    
 
-[Workshop Website](https://llvm-ad.github.io/) | [Dataset Download](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)
+[LLVM-AD Workshop & Challenges Website](https://llvm-ad.github.io/) | [Dataset Download](https://drive.google.com/drive/folders/1cqFjBH8MLeP6nKFM0l7oV-Srfke-Mx1R?usp=sharing)
 
-### Open-source datasets of 1st Workshop on Large Language Vision Models for Autonomous Driving (LLVM-AD) in WACV 2024     
+### Offical open-source datasets of 1st Workshop on Large Language Vision Models for Autonomous Driving (LLVM-AD) in WACV 2024     
 
-## LLVM-AD Workshop Introduction     
-
-The Winter Conference on Applications of Computer Vision (WACV) is a renowned conference in the field of computer vision applications, held annually. This conference will co-host the "Workshop on Large Language and Vision Models for Autonomous Driving (LLVM-AD)" in collaboration with Tencent Maps, PediaMed AI Lab, University of Illinois at Urbana-Champaign, Purdue University, and University of Virginia. The workshop will cover various topics including computer vision, pattern recognition, autonomous driving, and high-definition maps. It will include paper submissions, competitions, and award-sharing sessions during WACV 2024. The goal is to bring together professionals from academia and industry to explore the applications of large language and vision models in autonomous driving and high-definition mapping.       
-
-As part of the workshop, we are releasing two open-source datasets to encourage research on understanding real-world traffic language. While using these datasets is recommended, it is not mandatory for paper submissions related to these two datasets.     
-
-## MAPLM Dataset
+## MAPLM Dataset    
 
 Tencent Maps HD Map T.Lab, in collaboration with the University of Illinois at Urbana-Champaign, Purdue University, and the University of Virginia, has launched MAPLM, the industry's first multimodal language+vision traffic scenario understanding dataset. MAPLM combines point cloud BEV (Bird's Eye View) and panoramic images to provide a rich collection of road scenario images. This dataset also includes multi-level scene description data, which helps models navigate through complex and diverse traffic environments.      
 
@@ -41,7 +35,7 @@ The image below illustrates one frame's annotation information, encompassing thr
 
 <!-- ![Poster](./figures/example2.png) -->
 
-## Workshop Challenge     
+## MAPLM Challenge     
 
 Leveraging the rich road traffic scene information from the above dataset, we have designed a natural language and image combined Q&A task.     
 
@@ -52,7 +46,7 @@ We offer the following data:
 ✓ Panoramic Images: Wide-angle camera shots covering front, left-rear, and right-rear angles.      
 ✓ Projection Conversion Parameters: Perspective projection conversion parameters for each frame's photo and 3D point cloud.       
 
-Questions will target various tag dimensions, such as scene type, number and attributes of lanes, presence of intersections, etc. Sample questions are as follows:     
+Questions will target various tag dimensions, such as scene type, number and attributes of lanes, presence of intersections, etc. Sample questions are as follows:      
 
 ![Poster](./figures/qa1.png)     
 
@@ -101,7 +95,7 @@ unzip combine.zip
 `01/2024` HD Map data and image caption, including 2M of 3D Point Cloud, Extracted Point Cloud BEV image + multiple panoramic images + HD Map annotations.      
   
 
-## UCU Dataset    
+## Purdue UCU Dataset    
 
 [See this page](https://github.com/LLVM-AD/ucu-dataset)
 
