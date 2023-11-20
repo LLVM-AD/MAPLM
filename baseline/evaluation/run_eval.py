@@ -3,8 +3,10 @@ import json
 import random
 from typing import List
 
-from utils import load_data, get_result_file, acc_counter, compute_acc, load_model_output, retrieve_completion, \
+from utils import load_data, load_data_gpt, get_result_file, acc_counter, compute_acc, load_model_output, retrieve_completion, \
     completion_to_answer
+
+from nltk.translate.bleu_score import sentence_bleu
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_root', type=str, default='data/maplm_v0.1')
@@ -32,6 +34,7 @@ if __name__ == "__main__":
     model_output = load_model_output(args)
 
     frames, frame_ids = load_data(args)
+    # frames, frame_ids = load_data_gpt(args)
     result_file_name = get_result_file(args)
 
     for i, frame_id in enumerate(frame_ids):
@@ -45,26 +48,41 @@ if __name__ == "__main__":
         assert model_frame_output['id'] == frame_id
 
         for j, qa in enumerate(qas):
-            if qa['task'] != 'closed choice':
-                continue
-            question = qa['question']
-            choices: List[str] = qa['choices']
-            true_answer: int = qa['answer']
+            if qa['task'] == 'closed choice':
+                question = qa['question']
+                choices: List[str] = qa['choices']
+                true_answer: int = qa['answer']
 
-            # random_guess: int = random.randint(0, len(choices) - 1)
-            completion = retrieve_completion(question, model_frame_output['conversations'])
-            pred_answer = completion_to_answer(completion, choices)
+                # random_guess: int = random.randint(0, len(choices) - 1)
+                completion = retrieve_completion(question, model_frame_output['conversations'])
+                pred_answer = completion_to_answer(completion, choices)
 
-            if question not in results:
-                results[question] = acc_counter()
+                if question not in results:
+                    results[question] = acc_counter()
 
-            correct = bool(pred_answer == true_answer)
-            corrects.append(correct)
+                correct = bool(pred_answer == true_answer)
+                corrects.append(correct)
 
-            results[question]['total'] += 1
-            results[question]['correct'] += int(correct)
-            results['question_overall']['total'] += 1
-            results['question_overall']['correct'] += int(correct)
+                results[question]['total'] += 1
+                results[question]['correct'] += int(correct)
+                results['question_overall']['total'] += 1
+                results['question_overall']['correct'] += int(correct)
+            else:
+                question = qa['question']
+                true_answer: str = qa['answer']
+                
+                if question not in results:
+                    results[question] = acc_counter()
+
+                # random_guess: int = random.randint(0, len(choices) - 1)
+                completion = retrieve_completion(question, model_frame_output['conversations'])
+                # pred_answer = completion_to_answer(completion, choices)
+                
+                # breakpoint()
+                
+                results[question]['total'] += 1
+                results[question]['correct'] += sentence_bleu([true_answer.split()], completion.split(), weights=(0.25, 0.25, 0.25, 0.25))
+                
 
         results['frame_overall']['total'] += 1
         results['frame_overall']['correct'] += int(all(corrects))
